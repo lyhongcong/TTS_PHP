@@ -78,16 +78,6 @@ include 'includes/header.php';
             <button type="button" class="list-group-item list-group-item-action" onclick="setAction('Cảnh báo bảo mật')">Cảnh báo bảo mật</button>
         </div>
     </div>
-
-    <!-- <div class="mt-4 text-center">
-        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?> -->
-            <!-- Hiển thị nút Đăng xuất nếu đã đăng nhập -->
-            <!-- <a href="logout.php" class="btn btn-danger">Đăng xuất</a>
-        <?php else: ?> -->
-            <!-- Hiển thị nút Đăng nhập nếu chưa đăng nhập -->
-            <!-- <a href="login.php" class="btn btn-primary">Đăng nhập</a>
-        <?php endif; ?> -->
-    </div>
 </div>
 
 <script>

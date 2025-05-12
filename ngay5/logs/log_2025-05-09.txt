@@ -1,0 +1,4 @@
+[2025-05-09 06:49:10] - IP: ::1 - Hành động: Đăng xuất khỏi hệ thống
+[2025-05-09 06:53:40] - IP: ::1 - Hành động: Gửi biểu mẫu đánh giá - Tệp: upload_1746773620_z4841278468665_003_ba24710753b79adcc504fee639c1ac1d.jpg
+[2025-05-09 07:45:36] - IP: ::1 - Hành động: Đăng nhập thất bại - Tệp: upload_1746776736_logo.jpg
+[2025-05-09 07:48:58] - IP: ::1 - Hành động: Đăng nhập vào hệ thống - Tệp: upload_1746776938_z4841278468665_011_d0d40db5bd844cc6669e76716104f77a.jpg
