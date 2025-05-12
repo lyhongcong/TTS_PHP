@@ -43,6 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Lưu giỏ hàng vào file JSON
         $cart_data = [
             'customer_email' => $email,
+            'customer_phone' => $phone, // Thêm số điện thoại
+            'customer_address' => $address, // Thêm địa chỉ
             'products' => $_SESSION['cart'],
             'total_amount' => array_reduce($_SESSION['cart'], function ($sum, $item) {
                 return $sum + ($item['price'] * $item['quantity']);

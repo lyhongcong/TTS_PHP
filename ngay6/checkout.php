@@ -1,6 +1,21 @@
 <?php
 session_start();
 
+// Xử lý yêu cầu xóa giỏ hàng
+if (isset($_POST['clear_cart'])) {
+    // Xóa giỏ hàng trong session
+    unset($_SESSION['cart']);
+    
+    // Xóa file JSON nếu tồn tại
+    if (file_exists('cart_data.json')) {
+        unlink('cart_data.json');
+    }
+
+    // Chuyển hướng để tránh gửi lại form khi refresh
+    header("Location: checkout.php");
+    exit();
+}
+
 // Đọc giỏ hàng từ session
 $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
@@ -51,7 +66,14 @@ $cart_data = file_exists('cart_data.json') ? json_decode(file_get_contents('cart
 
         <h5 class="mt-4">Thông tin khách hàng:</h5>
         <p>Email: <?php echo htmlspecialchars($cart_data['customer_email'] ?? ''); ?></p>
+        <p>Số điện thoại: <?php echo htmlspecialchars($cart_data['customer_phone'] ?? ''); ?></p>
+        <p>Địa chỉ: <?php echo htmlspecialchars($cart_data['customer_address'] ?? ''); ?></p>
         <p>Thời gian đặt hàng: <?php echo htmlspecialchars($cart_data['created_at'] ?? ''); ?></p>
+
+        <!-- Nút xóa giỏ hàng -->
+        <form method="POST" class="mt-4">
+            <button type="submit" name="clear_cart" class="btn btn-danger w-100">Xóa giỏ hàng</button>
+        </form>
     <?php else: ?>
         <p class="text-center">Giỏ hàng trống.</p>
     <?php endif; ?>

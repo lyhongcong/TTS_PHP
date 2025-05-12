@@ -1,17 +1,14 @@
 {
     "customer_email": "conglhph48542@gmail.com",
+    "customer_phone": "0358650913",
+    "customer_address": "L\u1ea1ng S\u01a1n",
     "products": [
         {
             "title": "Ng\u1eef v\u0103n 11",
             "price": 15000,
-            "quantity": 2
-        },
-        {
-            "title": "To\u00e1n 11",
-            "price": 20000,
-            "quantity": 3
+            "quantity": 5
         }
     ],
-    "total_amount": 90000,
-    "created_at": "2025-05-12 01:21:48"
+    "total_amount": 75000,
+    "created_at": "2025-05-12 01:48:14"
 }
