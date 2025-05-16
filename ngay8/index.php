@@ -13,14 +13,14 @@ use XYZBank\Accounts\AccountCollection;
 use XYZBank\Bank;
 
 // Tạo tài khoản tiết kiệm
-$savings = new SavingsAccount("10201122", "Nguyễn Tấn Minh", 25000000);
+$savings = new SavingsAccount("10201122", "Minh", 25000000);
 Bank::incrementAccountCount();
 
 // Tạo tài khoản thanh toán
-$checking1 = new CheckingAccount("20301123", "Mã Xuân Giang", 9000000); 
+$checking1 = new CheckingAccount("20301123", "Giang", 9000000); 
 Bank::incrementAccountCount(); 
 
-$checking2 = new CheckingAccount("20401124", "Hoàng Đinh Hòa", 12000000);
+$checking2 = new CheckingAccount("20401124", "Hòa", 12000000);
 Bank::incrementAccountCount(); 
 
 // Gửi tiền và rút tiền
@@ -28,7 +28,7 @@ $checking1->deposit(5000000); // Gửi tiền vào tài khoản thanh toán
 $checking2->withdraw(2000000); // Rút tiền từ tài khoản thanh toán
 
 // Tính lãi suất
-echo "Lãi suất hàng năm cho Nguyễn Tấn Minh: " . number_format($savings->calculateAnnualInterest()) . " VNĐ\n";
+echo "Lãi suất hàng năm cho Minh: " . number_format($savings->calculateAnnualInterest()) . " VNĐ\n";
 
 // Quản lý tài khoản
 $accountCollection = new AccountCollection();
